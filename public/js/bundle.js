@@ -86,14 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/css-loader/index.js!./src/scss/test.css":
-/*!*****************************************************!*\
-  !*** ./node_modules/css-loader!./src/scss/test.css ***!
-  \*****************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./src/scss/app.scss":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./src/scss/app.scss ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"@charset \\\"UTF-8\\\";\\n\\n\\n  h1 {\\n    color: red;\\n    font-size: 50px;\\n  }\\n\\n\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/scss/test.css?./node_modules/css-loader");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"header h1 {\\n  color: blue; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/scss/app.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
 
 /***/ }),
 
@@ -138,7 +138,7 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _plugin_bubbly_bg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plugin/bubbly-bg */ \"./src/js/plugin/bubbly-bg.js\");\n/* harmony import */ var _plugin_bubbly_bg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_plugin_bubbly_bg__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _scss_test_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/test.css */ \"./src/scss/test.css\");\n/* harmony import */ var _scss_test_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_test_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n/**\n * option\n * animate: false, // default is true\n * blur: 1, // default is 4\n * bubbleFunc: () => `hsla(${Math.random() * 360}, 100%, 50%, ${Math.random() * 0.25})`, // default is () => `hsla(0, 0%, 100%, ${r() * 0.1})`)\n * bubbles: 100, // default is Math.floor((canvas.width + canvas.height) * 0.02);\n * canvas: document.querySelector(\"#background\"), // default is created and attached\n * colorStart: \"#4c004c\", // default is blue-ish\n * colorStop: \"#1a001a\",// default is blue-ish\n * compose: \"lighter\", // default is \"lighter\"\n */\nbubbly({\n  colorStart: '#fff',\n  colorStop: '#fff',\n  bubbles: 10,\n  blur: 1,\n  bubbleSizeAdjust: 60,\n  compose: 'source-over',\n  //bubbleFunc:() => `hsla(178, 100%, 58%, .6)`\n  bubbleFunc:() => `hsla(178, 98%, 36%, .6)`\n});\n\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _plugin_bubbly_bg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plugin/bubbly-bg */ \"./src/js/plugin/bubbly-bg.js\");\n/* harmony import */ var _plugin_bubbly_bg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_plugin_bubbly_bg__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _scss_app_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/app.scss */ \"./src/scss/app.scss\");\n/* harmony import */ var _scss_app_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_app_scss__WEBPACK_IMPORTED_MODULE_1__);\n//import pluginBubbly from './plugin/bubbly-bg';\n\n\n\n/**\n * option\n * animate: false, // default is true\n * blur: 1, // default is 4\n * bubbleFunc: () => `hsla(${Math.random() * 360}, 100%, 50%, ${Math.random() * 0.25})`, // default is () => `hsla(0, 0%, 100%, ${r() * 0.1})`)\n * bubbles: 100, // default is Math.floor((canvas.width + canvas.height) * 0.02);\n * canvas: document.querySelector(\"#background\"), // default is created and attached\n * colorStart: \"#4c004c\", // default is blue-ish\n * colorStop: \"#1a001a\",// default is blue-ish\n * compose: \"lighter\", // default is \"lighter\"\n */\nbubbly({\n  colorStart: '#fff',\n  colorStop: '#fff',\n  bubbles: 10,\n  blur: 1,\n  bubbleSizeAdjust: 60,\n  compose: 'source-over',\n  //bubbleFunc:() => `hsla(178, 100%, 58%, .6)`\n  bubbleFunc:() => `hsla(178, 98%, 36%, .6)`\n});\n\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ }),
 
@@ -153,14 +153,14 @@ eval("window.bubbly = function (config) {\n    const c = config || {};\n    cons
 
 /***/ }),
 
-/***/ "./src/scss/test.css":
+/***/ "./src/scss/app.scss":
 /*!***************************!*\
-  !*** ./src/scss/test.css ***!
+  !*** ./src/scss/app.scss ***!
   \***************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!./test.css */ \"./node_modules/css-loader/index.js!./src/scss/test.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/scss/test.css?");
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/sass-loader/lib/loader.js!./app.scss */ \"./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./src/scss/app.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/scss/app.scss?");
 
 /***/ })
 

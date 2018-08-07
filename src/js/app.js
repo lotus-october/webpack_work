@@ -1,5 +1,6 @@
+//import pluginBubbly from './plugin/bubbly-bg';
 import pluginBubbly from './plugin/bubbly-bg';
-import css from '../scss/test.css';
+import '../scss/app.scss';
 
 /**
  * option
