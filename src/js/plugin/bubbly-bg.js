@@ -41,7 +41,7 @@ window.bubbly = function (config) {
         context.globalCompositeOperation = c.compose || "lighter";
         bubbles.forEach(bubble => {
             context.beginPath();
-            context.arc(bubble.x, bubble.y, bubble.r, 0, Math.PI * 2);
+            context.arc(bubble.x, bubble.y, bubble.r + c.bubbleSizeAdjust, 0, Math.PI * 2);
             context.fillStyle = bubble.f;
             context.fill();
             // update positions for next draw

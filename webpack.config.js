@@ -12,5 +12,10 @@ module.exports = {
     filename: 'bundle.js',
     // 出力先のパス（v2系以降は絶対パスを指定する必要がある）
     path: path.join(__dirname, 'public/js')
+  },
+  module: {
+    rules: [
+      {test: /\.css$/, use: ['style-loader', 'css-loader']}
+    ]
   }
 };
