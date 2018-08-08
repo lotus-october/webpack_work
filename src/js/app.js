@@ -23,3 +23,9 @@ bubbly({
   //bubbleFunc:() => `hsla(178, 100%, 58%, .6)`
   bubbleFunc:() => `hsla(178, 98%, 36%, .6)`
 });
+
+const test = 1;
+const hoge = () => {
+	console.log(true);
+};
+
