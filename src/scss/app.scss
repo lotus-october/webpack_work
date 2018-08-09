@@ -1,12 +1,22 @@
 @charset "UTF-8";
 
 
+/* autoprefixer: on */
 header {
   h1 {
     color: blue;
     display: grid;
     font-size: 50px;
   }
+
 }
 
+::placeholder {
+  color: gray;
+}
+
+h2 {
+  display: flex;
+  background: linear-gradient(to bottom, white, black);
+}
 

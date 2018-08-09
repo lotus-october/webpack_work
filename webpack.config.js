@@ -31,43 +31,58 @@ module.exports = {
       },
 
       {
-        test: /\.scss$/,
+        test: /\.css$/,
+        //test: /\.scss$/,
 //        use: ExtractTextPlugin.extract({
+          // Sassファイルの読み込みとコンパイル
           use: [
+            // linkタグに出力する機能
             'style-loader',
-            'css-loader',
+            // CSSをバンドルするための機能
+            {
+              loader: 'css-loader',
+              options: {
+                // CSS内のurl()メソッドの取り込みを禁止する
+                url: false,
+                // ソースマップの利用有無
+                sourceMap: true,
+                // 空白文字やコメントを削除する
+                minimize: true,
+                // Sass+PostCSSの場合は2を指定
+                importLoaders: 2
+              },
+            },
+            // PostCSSのための設定
             {
               loader: 'postcss-loader',
               options: {
                 // PostCSS側でもソースマップを有効にする
+                sourceMap: true,
                 plugins: [
                   // Autoprefixerを有効化
                   // ベンダープレフィックスを自動付与する
-                  require('autoprefixer')()
-                ],
-                sourceMap: true
+                  //require('autoprefixer')
+                  require('autoprefixer')({
+                    grid: true,
+                    browsers: ['last 4 versions', 'Android 2.3'],
+                    cascade : false,
+                    remove  : false
+                  })
+                ]
+              },
+            },
+            // Sassをバンドルするための機能
+            {
+              loader: 'sass-loader',
+              options: {
+                // ソースマップの利用有無
+                sourceMap: true,
               }
-            },
-            {
-                loader: 'postcss-loader',
-                options: {
-                    plugins: function () {
-                        return [
-                            require('autoprefixer')
-                        ];
-                    }
-                }
-            },
-            {
-                loader: 'sass-loader',
-                options: {
-                  outputStyle: 'compressed',
-                  sourceMap: true
-                }
             }
-          ]
+          ],
  //       })
       },
+
 
       {
           test: /\.(jpe?g|png|gif|svg|ico)(\?.+)?$/,

@@ -86,19 +86,19 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/lib/index.js?!./node_modules/postcss-loader/lib/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/scss/app.scss":
-/*!************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/lib??ref--5-2!./node_modules/postcss-loader/lib??ref--5-3!./node_modules/sass-loader/lib/loader.js??ref--5-4!./src/scss/app.scss ***!
-  \************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/lib/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/js/test.css":
+/*!************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/lib??ref--5-2!./node_modules/sass-loader/lib/loader.js??ref--5-3!./src/js/test.css ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(true);
 // imports
 
 
 // module
-exports.push([module.i, "header h1{color:blue;display:grid;font-size:50px}\n", ""]);
+exports.push([module.i, "h1 {\n  color: blue;\n  display: grid;\n  font-size: 50px; }\n\nh2 {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));\n  background: -webkit-linear-gradient(top, white, black);\n  background: -o-linear-gradient(top, white, black);\n  background: linear-gradient(to bottom, white, black); }\n", "", {"version":3,"sources":["/Users/ysekiguchi/_webpack_work/webpack_work/src/js/test.css"],"names":[],"mappings":"AACE;EACE,YAAW;EACX,cAAa;EACb,gBAAe,EAChB;;AAEH;EACE,qBAAa;EAAb,qBAAa;EAAb,cAAa;EACb,oFAAoD;EAApD,uDAAoD;EAApD,kDAAoD;EAApD,qDAAoD,EACrD","file":"test.css","sourcesContent":["\n  h1 {\n    color: blue;\n    display: grid;\n    font-size: 50px;\n  }\n\nh2 {\n  display: flex;\n  background: linear-gradient(to bottom, white, black);\n}\n\n\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -697,7 +697,9 @@ var _bubblyBg = __webpack_require__(/*! ./plugin/bubbly-bg */ "./src/js/plugin/b
 
 var _bubblyBg2 = _interopRequireDefault(_bubblyBg);
 
-__webpack_require__(/*! ../scss/app.scss */ "./src/scss/app.scss");
+var _test = __webpack_require__(/*! ./test.css */ "./src/js/test.css");
+
+var _test2 = _interopRequireDefault(_test);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -725,6 +727,8 @@ bubbly({
     return 'hsla(178, 98%, 36%, .6)';
   }
 });
+//import '../scss/app.scss';
+
 
 var test = 1;
 var hoge = function hoge() {
@@ -820,15 +824,15 @@ window.bubbly = function (config) {
 
 /***/ }),
 
-/***/ "./src/scss/app.scss":
-/*!***************************!*\
-  !*** ./src/scss/app.scss ***!
-  \***************************/
+/***/ "./src/js/test.css":
+/*!*************************!*\
+  !*** ./src/js/test.css ***!
+  \*************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/postcss-loader/lib??ref--5-2!../../node_modules/postcss-loader/lib??ref--5-3!../../node_modules/sass-loader/lib/loader.js??ref--5-4!./app.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/lib/index.js?!./node_modules/postcss-loader/lib/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/scss/app.scss");
+var content = __webpack_require__(/*! !../../node_modules/css-loader??ref--5-1!../../node_modules/postcss-loader/lib??ref--5-2!../../node_modules/sass-loader/lib/loader.js??ref--5-3!./test.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/lib/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/js/test.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
