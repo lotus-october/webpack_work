@@ -1,7 +1,8 @@
 //import pluginBubbly from './plugin/bubbly-bg';
 import pluginBubbly from './plugin/bubbly-bg';
-//import '../scss/app.scss';
-import css from './test.css';
+import '../scss/app.scss';
+
+import test1_jpg from '../img/test1.jpg';
 
 /**
  * option
@@ -13,7 +14,6 @@ import css from './test.css';
  * colorStart: "#4c004c", // default is blue-ish
  * colorStop: "#1a001a",// default is blue-ish
  * compose: "lighter", // default is "lighter"
- */
 bubbly({
   colorStart: '#fff',
   colorStop: '#fff',
@@ -24,9 +24,10 @@ bubbly({
   //bubbleFunc:() => `hsla(178, 100%, 58%, .6)`
   bubbleFunc:() => `hsla(178, 98%, 36%, .6)`
 });
+ */
 
-const test = 1;
-const hoge = () => {
-	console.log(true);
-};
+let img_test1 = document.createElement('img');
+img_test1.src = test1_jpg;
+document.getElementById('test1_jpg').appendChild(img_test1);
+
 

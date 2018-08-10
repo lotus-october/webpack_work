@@ -12,14 +12,13 @@ module.exports = {
   // エントリーポイントの設定
   entry: [
     './src/js/app.js',
-//    './src/scss/app.scss',
   ],
   // 出力の設定
   output: {
-    // 出力するファイル名
+    // 出力ファイル名
     filename: 'bundle.js',
-    // 出力先のパス（v2系以降は絶対パスを指定する必要がある）
-    path: path.join(__dirname, 'public/js')
+    // 出力先パス
+    path: path.join(__dirname, 'public/js'),
   },
   module: {
     rules: [
@@ -27,12 +26,11 @@ module.exports = {
         test: /\.js$/,
         use: [
           'babel-loader'
-        ]
+        ],
       },
 
       {
-        test: /\.css$/,
-        //test: /\.scss$/,
+        test: /\.scss$/,
 //        use: ExtractTextPlugin.extract({
           // Sassファイルの読み込みとコンパイル
           use: [
@@ -49,7 +47,7 @@ module.exports = {
                 // 空白文字やコメントを削除する
                 minimize: true,
                 // Sass+PostCSSの場合は2を指定
-                importLoaders: 2
+                importLoaders: 2,
               },
             },
             // PostCSSのための設定
@@ -66,7 +64,7 @@ module.exports = {
                     grid: true,
                     browsers: ['last 4 versions', 'Android 2.3'],
                     cascade : false,
-                    remove  : false
+                    remove  : false,
                   })
                 ]
               },
@@ -83,17 +81,24 @@ module.exports = {
  //       })
       },
 
+      {
+        test: /\.(jpg|png)$/,
+        loaders: 'url-loader',
+      },
 
+      /*
       {
           test: /\.(jpe?g|png|gif|svg|ico)(\?.+)?$/,
           use: {
-              loader: 'url-loader',
+              //loader: 'url-loader',
+              loader: 'file-loader',
               options: {
                   limit: 8192,
                   name: './img/[name].[ext]'
               }
           }
       }
+      */
     ],
 
   }

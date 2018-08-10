@@ -11,12 +11,14 @@ header {
 
 }
 
-::placeholder {
-  color: gray;
-}
-
 h2 {
   display: flex;
   background: linear-gradient(to bottom, white, black);
+}
+
+.bg-test {
+  width: 200px;
+  height: 200px;
+  background-image: url(../img/test2.jpg);
 }
 
